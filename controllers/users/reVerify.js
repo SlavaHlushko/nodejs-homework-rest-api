@@ -19,7 +19,7 @@ const reVerify = async (req, res) => {
     html: `<a target="_blank" href="${BASE_URL}/api/users/verify/${user.verificationToken}">Click here to verify your email address</a>`,
   };
   await sendEmailBySG(verifyEmail);
-  res.status(200).json({ message: "Verification email sent" });
+  res.status(200).json({ message: "Verification email send" });
 };
 
 module.exports = reVerify;

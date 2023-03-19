@@ -14,7 +14,7 @@ router.post("/signup", validation(schemas.signupSchema), ctrl.signup);
 router.get("/verify/:verificationToken", ctrl.verify);
 
 // re-verification by e-mail
-router.post("/verify", ctrl.reVerify);
+router.post("/verify", validation(schemas.emailSchema), ctrl.reVerify);
 
 // login
 router.post("/login", validation(schemas.loginSchema), ctrl.login);
